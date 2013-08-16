@@ -153,7 +153,7 @@ class Tempfile < DelegateClass(File)
     super(@tmpfile)
   end
 
-  # Opens or reopens the file with mode "r+".
+  # Opens or reopens the file.
   def open
     @tmpfile.close if @tmpfile
     @tmpfile = File.open(@tmpname, @mode, @opts)
